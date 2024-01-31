@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/app.py": {
-      "runtime": "php@1.0.0",
+      "runtime": "python3.11",
       "includeFiles": "app.py"
     }
   },
@@ -10,5 +10,6 @@
       "src": "/(.*)",
       "dest": "api/app.py"
     }
-  ]
+  ],
+  "version": 2 
 }
