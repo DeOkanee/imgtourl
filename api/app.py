@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 def upload_image_to_imgbb(image_path):
-    api_key = '8602358fc27d0309cd2637c8e965dbe3'  # Ganti dengan API key ImgBB Anda
+    api_key = '8602358fc27d0309cd2637c8e965dbe3' 
     api_url = 'https://api.imgbb.com/1/upload'
 
     with open(image_path, 'rb') as file:
