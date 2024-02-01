@@ -3,7 +3,8 @@
   "builds": [
     {
       "src": "api/app.py",
-      "use": "@now/python"
+      "use": "@now/python",
+      "config": { "maxLambdaSize": "25mb" }
     }
   ],
   "routes": [
