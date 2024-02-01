@@ -3,11 +3,12 @@
   "builds": [
     {
       "src": "api/app.py",
-      "use": "@now/python3.12",
+      "use": "@now/python",
       "config": { "maxLambdaSize": "25mb" },
       "env": {
         "FLASK_ENV": "production",
-        "FLASK_APP": "api/app.py"
+        "FLASK_APP": "api/app.py",
+        "PYTHON_VERSION": "3.9"  
       }
     }
   ],
