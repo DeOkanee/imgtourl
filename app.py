@@ -3,21 +3,21 @@ import requests
 
 app = Flask(__name__)
 
-def upload_image_to_imgbb(image_path):
+def upload_image_to_imgbb(file):
     api_key = 'e83ee640b82a03e6bc0ffeaacb90ae27' 
     api_url = 'https://api.imgbb.com/1/upload'
 
-    with open(image_path, 'rb') as file:
-        files = {'image': (image_path, file)}
-        params = {'key': api_key}
-        try:
-            response = requests.post(api_url, params=params, files=files)
-            response.raise_for_status()  # Mengangkat pengecualian jika respons status bukan 2xx
-            result_url = response.json()['data']['url']
-            return result_url
-        except requests.exceptions.RequestException as e:
-            print(f"Error during ImgBB upload: {e}")
-            return None
+    files = {'image': (file.filename, file.read())}
+    params = {'key': api_key}
+
+    try:
+        response = requests.post(api_url, params=params, files=files)
+        response.raise_for_status()  # Mengangkat pengecualian jika respons status bukan 2xx
+        result_url = response.json()['data']['url']
+        return result_url
+    except requests.exceptions.RequestException as e:
+        print(f"Error during ImgBB upload: {e}")
+        return None
 
 @app.route('/')
 def index():
@@ -33,10 +33,7 @@ def upload():
     if file.filename == '':
         return redirect(url_for('index'))
 
-    image_path = f"uploads/{file.filename}"
-    file.save(image_path)
-
-    imgbb_url = upload_image_to_imgbb(image_path)
+    imgbb_url = upload_image_to_imgbb(file)
 
     if imgbb_url:
         return render_template('result.html', img_url=imgbb_url)
