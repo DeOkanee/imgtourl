@@ -23,18 +23,10 @@ def upload_image_to_imgbb(image_path):
 def index():
     return render_template('index.html')
 
-@app.route('/uploads', methods=['POST'])
-def upload():
-    try:
-        # Logika pengunggahan gambar dan pemrosesan lainnya
-        return "Upload berhasil!"
-    except Exception as e:
-        print(f"Kesalahan: {e}")
-        return "Terjadi kesalahan selama pemrosesan.", 500  # Mengembalikan status HTTP 500
-
 
 @app.route('/uploads', methods=['POST'])
 def upload():
+    
     if 'file' not in request.files:
         return redirect(url_for('index'))
 
