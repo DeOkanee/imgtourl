@@ -23,7 +23,8 @@ def upload_image_to_imgbb(image_path):
 def index():
     return render_template('index.html')
 
-@app.route('/upload', methods=['POST'])
+
+@app.route('/uploads', methods=['POST'])
 def upload():
     if 'file' not in request.files:
         return redirect(url_for('index'))
