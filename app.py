@@ -10,23 +10,21 @@ def upload_image_to_imgbb(image_path):
     with open(image_path, 'rb') as file:
         files = {'image': (image_path, file)}
         params = {'key': api_key}
-        response = requests.post(api_url, params=params, files=files)
-
-    if response.status_code == 200:
-        result_url = response.json()['data']['url']
-        return result_url
-    else:
-        print(f"Error {response.status_code}: {response.text}")
-        return None
+        try:
+            response = requests.post(api_url, params=params, files=files)
+            response.raise_for_status()  # Mengangkat pengecualian jika respons status bukan 2xx
+            result_url = response.json()['data']['url']
+            return result_url
+        except requests.exceptions.RequestException as e:
+            print(f"Error during ImgBB upload: {e}")
+            return None
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-
 @app.route('/uploads', methods=['POST'])
 def upload():
-    
     if 'file' not in request.files:
         return redirect(url_for('index'))
 
@@ -43,7 +41,7 @@ def upload():
     if imgbb_url:
         return render_template('result.html', img_url=imgbb_url)
     else:
-        return "Gagal mengonversi gambar ke URL."
+        return "Gagal mengonversi gambar ke URL. Cek log server untuk detail kesalahan."
 
 @app.route('/result')
 def result():
