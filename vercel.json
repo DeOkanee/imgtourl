@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "api/app.py",
-      "use": "@now/python",
+      "use": "@vercel/python",
       "config": { "maxLambdaSize": "25mb" }
     }
   ],
