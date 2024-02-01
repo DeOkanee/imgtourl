@@ -14,7 +14,7 @@
       "dest": "app.py"
     },
     {
-      "src": "/uploads",
+      "src": "uploads",
       "dest": "app.py" 
     }
   ],
