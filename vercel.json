@@ -9,7 +9,7 @@
   ],
   "routes": [
     {
-      "src": "/hasil",
+      "src": "/uploads",
       "dest": "app.py"
     },
     {
