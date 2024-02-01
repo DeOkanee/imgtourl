@@ -4,12 +4,7 @@
     {
       "src": "api/app.py",
       "use": "@now/python",
-      "config": { "maxLambdaSize": "25mb" },
-      "env": {
-        "FLASK_ENV": "production",
-        "FLASK_APP": "api/app.py",
-        "PYTHON_VERSION": "3.9"  
-      }
+      "config": { "maxLambdaSize": "25mb" }
     }
   ],
   "routes": [
