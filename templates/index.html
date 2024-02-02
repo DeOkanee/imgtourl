@@ -7,126 +7,122 @@
     <link rel="shortcut icon" href="/icon/icon.png" />
     <title>Image to URL Converter</title>
     <style>
-     body{
-      background-color: #ffffff;
-     
-     }
-     .container{
-      background-color: #1fc4f7;
-    border-radius: 9px;
+      body {
+        background-color: #ffffff;
+      }
+      .container {
+        background-color: #1fc4f7;
+        border-radius: 9px;
         margin: 20px auto; /* Perubahan di sini */
         width: 50%;
         margin-top: 20px;
         display: flex;
         flex-direction: column;
         margin: 5% auto;
-       height: auto;
-    position: relative;
-     }
-     .file-masuk {
-      display: block;
-    width: max-content; /* Lebar maksimal agar berada di tengah */
-    margin: 0 auto; /* Untuk membuat elemen berada di tengah horizontal */
-   
-    background-color: #ffffff;
-    padding: 5px 6px;
-    cursor: pointer;
-    color: black;
-    font-size: 17px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.185);
-  }
-  .file-masuk:hover {
-    background-color: rgb(132, 223, 114);
-    color: white;
-  }
-  .file-name {
-    
-    margin: 0 50px ;
-    margin-top: 1%;
-    font-size: 16px;
-    color: #1d1d1d;
-    background-color: #ffffff;
-    padding: 8px 0;
-    border-radius: 9px;
-  }
-  h1 {
-    margin-top: 7%;
-    text-align: center;
-    color: #333;
-    margin-bottom: 7%;
-  }
-  form {
-    justify-content: center;
-    margin-top: 20px;
-    text-align: center;
-  }
+        height: auto;
+        position: relative;
+      }
+      .file-masuk {
+        display: block;
+        width: max-content; /* Lebar maksimal agar berada di tengah */
+        margin: 0 auto; /* Untuk membuat elemen berada di tengah horizontal */
 
-  input[type="file"] {
-    opacity: 0;
-  }
-  .tombol {
-    padding: 10px 20px;
-    background-color: #41da47;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 5%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.445);
-  }
-  .tombol:hover {
-    background-color: rgb(31, 88, 245);
-  }
-  .container p a {
-    text-decoration: none;
-    font-size: 18px;
-    bottom: 0;
-    text-align: center;
-    margin-top: 5%;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    cursor: pointer;
-    color: white;
-    animation: changeColor 5s infinite; /* Menambahkan animasi perubahan warna */
-  }
-  .container p {
-    font-size: 18px;
-    color: white;
-    left: 50%;
-    text-align: center;
-    position: relative;
-          transform: translateX(-50%);
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  }
+        background-color: #ffffff;
+        padding: 5px 6px;
+        cursor: pointer;
+        color: black;
+        font-size: 17px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.185);
+      }
+      .file-masuk:hover {
+        background-color: rgb(132, 223, 114);
+        color: white;
+      }
+      .file-name {
+        margin: 0 50px;
+        margin-top: 1%;
+        font-size: 16px;
+        color: #1d1d1d;
+        background-color: #ffffff;
+        padding: 8px 0;
+        border-radius: 9px;
+      }
+      h1 {
+        margin-top: 7%;
+        text-align: center;
+        color: #333;
+        margin-bottom: 7%;
+      }
+      form {
+        justify-content: center;
+        margin-top: 20px;
+        text-align: center;
+      }
 
-  @keyframes changeColor {
-    0% {
-      color: red;
-    }
-    25% {
-      color: yellow;
-    }
-    50% {
-      color: blue;
-    }
-    75% {
-      color: green;
-    }
-    100% {
-      color: purple;
-    }
-  }
-     
+      input[type="file"] {
+        opacity: 0;
+      }
+      .tombol {
+        padding: 10px 20px;
+        background-color: #41da47;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 5%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.445);
+      }
+      .tombol:hover {
+        background-color: rgb(31, 88, 245);
+      }
+      .container p a {
+        text-decoration: none;
+        font-size: 18px;
+        bottom: 0;
+        text-align: center;
+        margin-top: 5%;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        cursor: pointer;
+        color: white;
+        animation: changeColor 5s infinite; /* Menambahkan animasi perubahan warna */
+      }
+      .container p {
+        font-size: 18px;
+        color: white;
+        left: 50%;
+        text-align: center;
+        position: relative;
+        transform: translateX(-50%);
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      @keyframes changeColor {
+        0% {
+          color: red;
+        }
+        25% {
+          color: yellow;
+        }
+        50% {
+          color: blue;
+        }
+        75% {
+          color: green;
+        }
+        100% {
+          color: purple;
+        }
+      }
+
       @media (max-width: 567px) {
-       
-
         .container {
           width: 100%;
-                height: auto;
-              margin: 30% auto;
+          height: auto;
+          margin: 30% auto;
         }
-      .file-name {
+        .file-name {
           margin: 0 20px;
           margin-top: 1%;
           font-size: 16px;
@@ -135,7 +131,7 @@
           padding: 8px 0;
           border-radius: 9px;
         }
-        .file-masuk{
+        .file-masuk {
           padding: 6px 6px;
           margin-top: 30px;
         }
@@ -149,8 +145,9 @@
         }
 
         .tombol {
-          padding: 10px 20px;
+          padding: 9px 8px;
           margin-top: 10%;
+          font-size: 15px;
         }
 
         .container p {
@@ -167,7 +164,7 @@
   <body>
     <div class="container">
       <h1>IMAGE to URL Converter</h1>
-    
+
       <form action="/uploads" method="post" enctype="multipart/form-data">
         <label for="file" class="file-masuk">Masukan File</label>
         <input
@@ -179,7 +176,9 @@
         />
         <div class="file-name" id="file-name">Tidak ada file</div>
         <br />
-        <button class="tombol" type="submit">Convert to URL</button>
+        <button class="tombol" type="submit" id="convertButton">
+          Convert to URL
+        </button>
       </form>
       <p>By <a href="https://s.id/deoka" target="_blank">DeOka</a></p>
     </div>
@@ -191,6 +190,27 @@
           "file-name"
         ).textContent = `Nama File: ${fileName}`;
       }
+      function displayFileName(input) {
+        const fileName = input.files[0].name;
+        document.getElementById(
+          "file-name"
+        ).textContent = `Nama File: ${fileName}`;
+      }
+
+      document
+        .getElementById("convertButton")
+        .addEventListener("click", function () {
+          // Mengubah teks tombol menjadi "Sedang Memproses..."
+          this.textContent = "Sedang Memproses...";
+
+          // Menambahkan pengiriman formulir atau tindakan lain yang diperlukan
+          // Misalnya, Anda dapat menambahkan kueri AJAX atau fungsi lainnya di sini
+          // Contoh sederhana: setTimeout untuk simulasi proses
+          setTimeout(() => {
+            // Ganti teks kembali setelah simulasi proses selesai
+            this.textContent = "Convert to URL";
+          }, 2000); // Waktu simulasi proses dalam milidetik (2 detik dalam contoh ini)
+        });
     </script>
   </body>
 </html>
