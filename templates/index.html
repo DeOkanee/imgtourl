@@ -191,26 +191,21 @@
         ).textContent = `Nama File: ${fileName}`;
       }
       function displayFileName(input) {
-        const fileName = input.files[0].name;
-        document.getElementById(
-          "file-name"
-        ).textContent = `Nama File: ${fileName}`;
-      }
+    const fileName = input.files[0].name;
+    document.getElementById("file-name").textContent = `Nama File: ${fileName}`;
+  }
 
-      document
-        .getElementById("convertButton")
-        .addEventListener("click", function () {
-          // Mengubah teks tombol menjadi "Sedang Memproses..."
-          this.textContent = "Sedang Memproses...";
+  document.getElementById("convertButton").addEventListener("click", function () {
+    // Mengubah teks tombol menjadi "Sedang Memproses..."
+    this.textContent = "Sedang Memproses...";
 
-          // Menambahkan pengiriman formulir atau tindakan lain yang diperlukan
-          // Misalnya, Anda dapat menambahkan kueri AJAX atau fungsi lainnya di sini
-          // Contoh sederhana: setTimeout untuk simulasi proses
-          setTimeout(() => {
-            // Ganti teks kembali setelah simulasi proses selesai
-            this.textContent = "Convert to URL";
-          }, 3000); // Waktu simulasi proses dalam milidetik (2 detik dalam contoh ini)
-        });
+    // Tambahan: Anda dapat menambahkan pengiriman formulir atau tindakan lain yang diperlukan di sini
+    // Misalnya, Anda dapat menambahkan kueri AJAX atau fungsi lainnya di sini
+    // ...
+
+    // Ganti teks kembali setelah tindakan selesai
+    // Misalnya, Anda dapat memanggil fungsi di sini setelah tindakan selesai
+  });
     </script>
   </body>
 </html>
